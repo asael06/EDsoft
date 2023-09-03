@@ -30,7 +30,7 @@ const Projects = ({ projects }) => {
 };
 
 export const getStaticProps = async () => {
-  const response = await axios.get(`${process.env.PROJECTS_API}`);
+  const response = await axios.get(`https://e-dsoft.vercel.app/api/projects`);
   const projects = response.data;
   return { props: { projects } };
 };

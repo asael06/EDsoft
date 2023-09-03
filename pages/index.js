@@ -25,9 +25,13 @@ const Home = ({ services, projects }) => {
 };
 
 export const getStaticProps = async () => {
-  const srvResponse = await axios.get(`${process.env.SERVICES_API}`);
+  const srvResponse = await axios.get(
+    `https://e-dsoft.vercel.app/api/services`
+  );
   const services = srvResponse.data;
-  const prjResponse = await axios.get(`${process.env.LAST_PROJECTS_API}`);
+  const prjResponse = await axios.get(
+    `https://e-dsoft.vercel.app/api/last-projects`
+  );
   const projects = prjResponse.data;
   return { props: { services, projects } };
 };
