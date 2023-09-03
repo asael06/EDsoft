@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const AboutUs = () => {
@@ -10,10 +11,11 @@ const AboutUs = () => {
           Ver experiencia
         </Link>
       </div>
-      <img
+      <Image
         className="background"
         src="/images/bg-section.jpg"
         alt="Alumnos estudiando"
+        layout="fill"
       />
     </section>
   );
